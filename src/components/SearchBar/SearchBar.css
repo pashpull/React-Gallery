@@ -1,0 +1,18 @@
+.search-bar {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.search__input {
+  border: none;
+  border-radius: 8px;
+  background-color: #e8ecf0;
+  padding: 10px;
+  outline: none;
+}
+
+.home__option-search {
+  background-color: transparent;
+}

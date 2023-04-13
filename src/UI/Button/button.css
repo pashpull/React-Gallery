@@ -1,0 +1,35 @@
+.btn {
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-dark {
+  background-color: #e7e7e7;
+}
+
+.btn-dark_active {
+  color: #e7e7e7;
+  background-color: #626262;
+}
+
+.btn-dark:hover {
+  background-color: #e8ecf0;
+  border-color: rgb(192, 189, 189);
+}
+
+.btn-light {
+  background-color: #f2f5f9;
+}
+
+.btn-light:hover {
+  background-color: #e8ecf0;
+  border-color: rgb(192, 189, 189);
+}
+
+.btn-light_none-hover {
+  background-color: transparent;
+}

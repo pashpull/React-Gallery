@@ -1,0 +1,40 @@
+* {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  font-weight: 500;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(98, 98, 98);
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f2f5f9;
+}
+
+body > div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2.2em;
+  /* line-height: 1.1; */
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* a:hover {
+  color: #535bf2;
+} */
+
+.main {
+  flex: 1 1 auto;
+}
