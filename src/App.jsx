@@ -35,9 +35,9 @@ function App() {
         <Header />
         <main className="main">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="contacts" element={<Contacts />} />
+            <Route path="React-Galary/" element={<Home />} />
+            <Route path="React-Galary/about" element={<About />} />
+            <Route path="React-Galary/contacts" element={<Contacts />} />
             <Route path="*" element={<h1>Not found</h1>} />
           </Routes>
         </main>
