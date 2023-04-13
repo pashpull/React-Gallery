@@ -15,6 +15,7 @@
 .home__pages {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 677px) {
