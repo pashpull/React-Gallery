@@ -21,6 +21,6 @@
 @media (max-width: 677px) {
   .home__photos {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto 15px;
   }
 }

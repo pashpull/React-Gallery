@@ -6,6 +6,7 @@
   background-color: rgba(98, 98, 98, 0.7);
   position: fixed;
   display: none;
+  padding: 15px;
 }
 
 .modal-wrap_active {
@@ -20,6 +21,7 @@
   display: flex;
   border-radius: 15px;
 }
+
 .modal__image-wrap {
   max-width: fit-content;
   border-radius: 10px;
@@ -49,4 +51,22 @@
 
 .modal__comments {
   flex: 1 1 auto;
+}
+
+@media (max-width: 1214px) {
+  .modal {
+    flex-direction: column;
+  }
+  .modal__info {
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .modal__info-header {
+    border-top: 1px #f2f5f9 solid;
+    padding-top: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+  }
 }
