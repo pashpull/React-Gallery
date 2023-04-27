@@ -12,12 +12,6 @@
   margin-bottom: 15px;
 }
 
-.home__pages {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
 @media (max-width: 677px) {
   .home__photos {
     max-width: 400px;

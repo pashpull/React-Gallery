@@ -3,7 +3,7 @@ import Button from '../../UI/Button/Button';
 import { useContext, useState } from 'react';
 import ImagesContext from '../../context/context';
 
-const SearchBar = ({ updatePagesBar }) => {
+const SearchBar = () => {
   const { searchValue, setSearchValue, setPage } = useContext(ImagesContext);
 
   const [categories, setCategories] = useState([
@@ -28,7 +28,6 @@ const SearchBar = ({ updatePagesBar }) => {
           onclick={() => {
             setSearchValue(cat);
             setPage(1);
-            updatePagesBar(1);
           }}
           active={searchValue === cat ? true : false}
         />

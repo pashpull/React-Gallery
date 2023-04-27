@@ -5,6 +5,7 @@ import ImagesContext from '../../context/context';
 import Popup from '../../components/Popup/Popup';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Button from '../../UI/Button/Button';
+import Pagination from '../../components/Pagination/Pagination';
 
 const Home = () => {
   const { photos, isLoading, searchValue, page, setPage, totalPages } =
@@ -28,27 +29,6 @@ const Home = () => {
     setPhotoInfo({ url: url, name: name });
   };
 
-  const [pagesBar, setPagesBar] = useState([1, 2, 3, 4, 5, 6]);
-
-  const updatePagesBar = (actualPage) => {
-    let newPagesBar = [];
-    if (actualPage > 3) {
-      if (actualPage < totalPages - 3) {
-        for (let i = -3; i < 3; i++) {
-          newPagesBar.push(actualPage + i);
-        }
-      } else {
-        for (let i = -5; i < 1; i++) {
-          newPagesBar.push(totalPages + i);
-        }
-      }
-      setPagesBar(newPagesBar);
-    } else {
-      setPagesBar([1, 2, 3, 4, 5, 6]);
-    }
-  };
-
-  useEffect(() => updatePagesBar(page), []);
   return (
     <div className="home">
       <Popup
@@ -56,7 +36,9 @@ const Home = () => {
         activMod={activModal}
         photoInfo={photoInfo}
       />
-      <SearchBar updatePagesBar={updatePagesBar} />
+      <SearchBar
+      // updatePagesBar={updatePagesBar}
+      />
       <div className="home__photos">
         {isLoading
           ? 'Loading in progress...'
@@ -73,44 +55,7 @@ const Home = () => {
               />
             ))}
       </div>
-      {isLoading || (
-        <div className="home__pages">
-          <Button
-            text={'To the begining'}
-            type={'dark'}
-            hover={''}
-            onclick={(e) => {
-              e.preventDefault();
-              setPage(1);
-              updatePagesBar(1);
-            }}
-          />
-          {pagesBar.map((pageNum) => (
-            <Button
-              key={pageNum}
-              text={pageNum}
-              type={'dark'}
-              hover={''}
-              onclick={(e) => {
-                e.preventDefault();
-                setPage(pageNum);
-                updatePagesBar(pageNum);
-              }}
-              active={pageNum === page ? true : false}
-            />
-          ))}
-          <Button
-            text={'To the end'}
-            type={'dark'}
-            hover={''}
-            onclick={(e) => {
-              e.preventDefault();
-              setPage(totalPages);
-              updatePagesBar(totalPages);
-            }}
-          />
-        </div>
-      )}
+      {isLoading || <Pagination />}
     </div>
   );
 };
