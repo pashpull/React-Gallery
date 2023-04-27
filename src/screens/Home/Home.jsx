@@ -1,10 +1,9 @@
 import './Home.css';
 import Card from '../../components/Card/Card';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import ImagesContext from '../../context/context';
 import Popup from '../../components/Popup/Popup';
 import SearchBar from '../../components/SearchBar/SearchBar';
-import Button from '../../UI/Button/Button';
 import Pagination from '../../components/Pagination/Pagination';
 
 const Home = () => {
@@ -36,9 +35,7 @@ const Home = () => {
         activMod={activModal}
         photoInfo={photoInfo}
       />
-      <SearchBar
-      // updatePagesBar={updatePagesBar}
-      />
+      <SearchBar />
       <div className="home__photos">
         {isLoading
           ? 'Loading in progress...'
