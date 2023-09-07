@@ -50,7 +50,6 @@ const SearchBar = () => {
             setSearchValue(inputValue);
             setInputValue('');
             setPage(1);
-            updatePagesBar(1);
           }}
           hover={'_none-hover'}
         />

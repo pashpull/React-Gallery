@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './screens/Home/Home';
@@ -31,18 +31,18 @@ function App() {
 
   return (
     <ImagesContext.Provider value={value}>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <main className="main">
           <Routes>
-            <Route path="React-Galary/" element={<Home />} />
-            <Route path="React-Galary/about" element={<About />} />
-            <Route path="React-Galary/contacts" element={<Contacts />} />
-            <Route path="*" element={<h1>Not found</h1>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="*" element={<h1>Page is not found</h1>} />
           </Routes>
         </main>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </ImagesContext.Provider>
   );
 }

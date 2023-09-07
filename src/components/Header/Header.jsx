@@ -5,17 +5,17 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__content">
-        <a href="React-Galary/" className="header__title-link">
-          <h1 className="header__title">React Galary</h1>
+        <a href="/" className="header__title-link">
+          <h1 className="header__title">React Gallery</h1>
         </a>
         <nav className="header__nav">
-          <Link to="React-Galary/" className="header__link">
+          <Link to="/" className="header__link">
             Main
           </Link>
-          <Link to="React-Galary/about" className="header__link">
+          <Link to="/about" className="header__link">
             About
           </Link>
-          <Link to="React-Galary/contacts" className="header__link">
+          <Link to="/contacts" className="header__link">
             Contacts
           </Link>
         </nav>

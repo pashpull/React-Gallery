@@ -12,7 +12,7 @@ const Home = () => {
 
   const [modWrapClasses, setModWrapClasses] = useState('modal-wrap');
 
-  const activModal = () => {
+  const activeModal = () => {
     if (modWrapClasses === 'modal-wrap') {
       setModWrapClasses('modal-wrap modal-wrap_active');
       document.getElementsByTagName('body')[0].style.overflow = 'hidden';
@@ -32,7 +32,7 @@ const Home = () => {
     <div className="home">
       <Popup
         wrapClass={modWrapClasses}
-        activMod={activModal}
+        activeMod={activeModal}
         photoInfo={photoInfo}
       />
       <SearchBar />
@@ -44,7 +44,7 @@ const Home = () => {
           : photos.map((photo) => (
               <Card
                 photoInfo={getPhotoInfo}
-                activMod={activModal}
+                activeMod={activeModal}
                 photo={photo.urls.regular}
                 name={photo.user.username}
                 key={photo.id}

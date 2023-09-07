@@ -1,7 +1,7 @@
 import Button from '../../UI/Button/Button';
 import './Popup.css';
 
-const Popup = ({ name, wrapClass, activMod, photoInfo }) => {
+const Popup = ({ name, wrapClass, activeMod, photoInfo }) => {
   return (
     <div className={wrapClass}>
       <div className="modal">
@@ -11,7 +11,7 @@ const Popup = ({ name, wrapClass, activMod, photoInfo }) => {
         <div className="modal__info">
           <div className="modal__info-header">
             <h2 className="modal__info-title">{photoInfo.name}</h2>
-            <Button text={'Close'} type={'btn-light'} onclick={activMod} />
+            <Button text={'Close'} type={'btn-light'} onclick={activeMod} />
           </div>
           <div className="modal__comments"></div>
         </div>
